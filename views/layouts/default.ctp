@@ -52,6 +52,7 @@
 						case 'administrador':
 						echo $html->link('Examenes',array('controller'=> 'exams','action' => 'index'), array('escape' => false)).'|';
 						echo $html->link('Usuarios',array('controller'=> 'users','action' => 'index'), array('escape' => false)).'|';
+						
 						break;
 						
 						case 'profesor':

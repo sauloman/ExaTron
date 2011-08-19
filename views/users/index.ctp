@@ -1,5 +1,5 @@
 <div class="users index">
-	<h2><?php __('Users');?></h2>
+	<h2><?php __('Usuarios');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
@@ -26,7 +26,6 @@
 		<td><?php echo $user['User']['perfil']; ?>&nbsp;</td>
 		<td><?php echo $user['User']['notas']; ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $user['User']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $user['User']['id'])); ?>
 		</td>

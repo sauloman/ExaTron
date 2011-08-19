@@ -1,13 +1,13 @@
 <div class="users form">
 <?php echo $this->Form->create('User');?>
 	<fieldset>
-		<legend><?php __('Edit User'); ?></legend>
+		<legend><?php __('Editar Usuario'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('matricula');
 		echo $this->Form->input('password');
-		echo $this->Form->input('perfil');
+		echo $this->Form->input('perfil',array('options'=>array('profesor'=>'Profesor','alumno'=>'Alumno','administrador'=>'Administrador')));
 		echo $this->Form->input('notas');
 	?>
 	</fieldset>
@@ -17,7 +17,6 @@
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $this->Form->value('User.id')), null, sprintf(__('Are you sure you want to delete # %s?', true), $this->Form->value('User.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Users', true), array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(__('Listado de Usuarios', true), array('action' => 'index'));?></li>
 	</ul>
 </div>

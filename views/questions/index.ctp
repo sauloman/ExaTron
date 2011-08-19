@@ -1,5 +1,5 @@
 <div class="questions index">
-	<h2><?php __('Questions');?></h2>
+	<h2><?php __('Preguntas');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
@@ -54,8 +54,6 @@
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Question', true), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Exams', true), array('controller' => 'exams', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Exam', true), array('controller' => 'exams', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva Pregunta', true), array('action' => 'add')); ?></li>
 	</ul>
 </div>

@@ -1,3 +1,6 @@
+<?php 
+echo $javascript->link('ckeditor/ckeditor', NULL, false); 
+?>
 <div class="questions form">
 <?php echo $this->Form->create('Question');?>
 	<fieldset>
@@ -6,6 +9,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('exam_id');
 		echo $this->Form->input('Contenido');
+		echo $fck->load('question.Contenido');
 		echo $this->Form->input('Resp_Correc');
 		echo $this->Form->input('puntuacion');
 		echo $this->Form->input('profesor');

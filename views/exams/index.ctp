@@ -24,7 +24,6 @@
 		<td><?php echo $exam['Exam']['creador']; ?>&nbsp;</td>
 		<td><?php echo $exam['Exam']['fecha']; ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver', true), array('action' => 'view', $exam['Exam']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $exam['Exam']['id'])); ?>
 			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $exam['Exam']['id']), null, sprintf(__('Quiere Eliminar el Examen # %s?', true), $exam['Exam']['id'])); ?>
 		</td>
@@ -49,6 +48,6 @@
 	<h3><?php __('Opciones'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Nuevo Examen', true), array('action' => 'add')); ?></li>
-		<?php echo $html->link('Salir', '/users/logout' );?>
+		
 	</ul>
 </div>

@@ -14,6 +14,22 @@ class AnswersController extends AppController {
 		}
 		$this->set('answer', $this->Answer->read(null, $id));
 	}
+	
+	
+	function beforeFilter(){
+		$this->Auth->authorize='controller';
+		if($this->Auth->user('perfil')=='alumno'){
+			//$this-> Auth->deny('indexAlumno');
+			
+			//$this->Auth->allow('index');
+			$this->Auth->allow('add');
+			//$this->Auth->allow('edit');
+			//$this->Auth->allow('delete');
+		}
+		$this->set('usuario',$this->Auth->user('matricula'));
+		$this->set('perfil',$this->Auth->user('perfil'));
+			
+	}
 
 	function add($idAssigned) {
 		$assigneds = $this->Answer->Assigned->read(null, $idAssigned);

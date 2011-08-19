@@ -27,7 +27,9 @@ class AssignedsController extends AppController {
 		}else{
 			$this->Auth->allow('indexAlumno');
 		}
-		
+		$this->set('usuario',$this->Auth->user('matricula'));
+		$this->set('perfil',$this->Auth->user('perfil'));
+	
 			
 	}
 	

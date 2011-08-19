@@ -7,6 +7,21 @@ class ExamsController extends AppController {
 		$this->Exam->recursive = 0;
 		$this->set('exams', $this->paginate());
 	}
+	
+	function beforeFilter(){
+		$this->Auth->authorize='controller';
+		if($this->Auth->user('perfil')=='administrador'){
+			
+			
+			$this->Auth->allow('index');
+			$this->Auth->allow('add');
+			$this->Auth->allow('edit');
+			$this->Auth->allow('delete');
+		}
+		
+		$this->set('usuario',$this->Auth->user('matricula'));
+		$this->set('perfil',$this->Auth->user('perfil'));	
+	}
 
 	function view($id = null) {
 		if (!$id) {
